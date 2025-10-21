@@ -10,8 +10,8 @@ class Paddle
     private:
         float spawnX;
         float spawnY;
-        RectangleShape paddle;
     public:
+        RectangleShape paddle;
         Paddle(int x, int y, int width, int height);
         void movePaddle(int direction);
         void drawPaddle(RenderWindow& window);

@@ -38,6 +38,8 @@ int main()
         paddle1.drawPaddle(window);
         paddle2.drawPaddle(window);
         ball.drawBall(window);
+
+        ball.collisionHandle(paddle1, paddle2);
         
         window.display();
     }

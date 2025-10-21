@@ -12,7 +12,7 @@ set(CMAKE_PREFIX_PATH /ucrt64 /mingw64)
 
 find_package(SFML 2.5 COMPONENTS graphics window system REQUIRED)
 
-add_executable(Pong src/main.cpp src/Paddle.cpp)
+add_executable(Pong src/main.cpp src/Paddle.cpp src/Ball.cpp)
 
 target_link_libraries(Pong PRIVATE sfml-graphics sfml-window sfml-system)
 

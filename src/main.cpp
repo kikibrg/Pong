@@ -1,6 +1,7 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "Paddle.hpp"
+#include "Ball.hpp"
 
 using namespace std;
 using namespace sf;
@@ -12,6 +13,7 @@ int main()
 
     Paddle paddle1(40, 265, 15, 70);
     Paddle paddle2(745, 265, 15, 70);
+    Ball ball(390, 290, 10);
 
     while(window.isOpen() && !Keyboard::isKeyPressed(Keyboard::Escape)) {
 
@@ -30,10 +32,12 @@ int main()
         if(Keyboard::isKeyPressed(Keyboard::Down))
             paddle2.movePaddle(1);
 
+        ball.moveBall();
         window.clear();
         
         paddle1.drawPaddle(window);
         paddle2.drawPaddle(window);
+        ball.drawBall(window);
         
         window.display();
     }
